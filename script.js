@@ -1,44 +1,70 @@
 $(document).ready(function() {
-    // Clear local storage, form input, and search results on page load
-    window.onload = function() {
-        localStorage.clear();
-        $("#city").val('');
-        clearSearchResults();
-    };
-
-    $("#form-submit").submit(function(event) {
-        performSearch(event);
+    const apiKey = '2e05f57a3b196673df6bfdd46d55a39c';
+  
+    function getWeather(city) {
+      const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+      fetch(currentWeatherUrl)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);  // Log the data to check its structure
+          if (data.cod === 200) {  // Check if the response is successful
+            updateCurrentWeather(data);
+          } else {
+            console.error('Error:', data.message);
+          }
+        })
+        .catch(error => console.error('Error:', error));
+  
+      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+      fetch(forecastUrl)
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);  // Log the data to check its structure
+          if (data.cod === "200") {  // Check if the response is successful
+            updateForecast(data);
+          } else {
+            console.error('Error:', data.message);
+          }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+  
+    function updateCurrentWeather(data) {
+      $('#current-city').text(`${data.name} (${new Date().toLocaleDateString()})`);
+      $('#current-temp').text(`Temp: ${data.main.temp}°C`);
+      $('#current-wind').text(`Wind: ${data.wind.speed} MPH`);
+      $('#current-humidity').text(`Humidity: ${data.main.humidity}%`);
+    }
+  
+    function updateForecast(data) {
+      $('#forecast').empty();
+      for (let i = 0; i < data.list.length; i += 8) {
+        const forecast = data.list[i];
+        const card = `
+          <div class="col-md-2 card">
+            <h5>${new Date(forecast.dt_txt).toLocaleDateString()}</h5>
+            <p>Temp: ${forecast.main.temp}°C</p>
+            <p>Wind: ${forecast.wind.speed} MPH</p>
+            <p>Humidity: ${forecast.main.humidity}%</p>
+          </div>
+        `;
+        $('#forecast').append(card);
+      }
+    }
+  
+    $('#form-submit').submit(function(event) {
+      event.preventDefault();
+      const city = $('#city').val();
+      getWeather(city);
+      addCityButton(city);  // Add button for the searched city
     });
-
-    function performSearch(event) {
-        event.preventDefault();
-
-        var city = $("#city").val();
-        var apiKey = '2e05f57a3b196673df6bfdd46d55a39c';
-        var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-        fetch(url)
-            .then(response => response.json())
-            .then(data => formatSearch(data))
-            .catch(error => console.error('Error:', error));
+  
+    function addCityButton(city) {
+      const button = $(`<button class="btn btn-secondary mb-2">${city}</button>`);
+      button.click(function() {
+        getWeather(city);
+      });
+      $('#city-buttons').append(button);
     }
-
-    function formatSearch(jsonObject) {
-        var city_name = jsonObject.name;
-        var city_weather = jsonObject.weather[0].main;
-        var city_temp = jsonObject.main.temp;
-        var icon = jsonObject.weather[0].icon;
-
-        $("#city_name").text("City: " + city_name);
-        $("#city_weather").text("Weather: " + city_weather);
-        $("#city_temp").text("Temperature: " + city_temp + "°C");
-        $("#weather-icon").attr("src", `http://openweathermap.org/img/wn/${icon}.png`);
-    }
-
-    function clearSearchResults() {
-        $("#city_name").text('');
-        $("#city_weather").text('');
-        $("#city_temp").text('');
-        $("#weather-icon").attr("src", '');
-    }
-});
+  });
+  

@@ -16,13 +16,27 @@ body {
     flex: 1;
 }
 
+header {
+    background-color: rgb(43, 99, 98); /* Change this to the desired color */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Sacramento', cursive;
+    font-size: 3em;
+}
+
 .jumbotron {
     background: rgb(111, 121, 177) !important;
     color: white;
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(43, 99, 98);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -91,4 +105,88 @@ h1, .font-sacramento {
 .form-text.font-sacramento {
     font-family: 'Sacramento', cursive;
     font-size: 3em; /* Larger font size for the form text */
+}
+
+.sidebar {
+    padding: 20px;
+    height: 100vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.current-weather {
+    background-color: rgb(103, 123, 124);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#forecast {
+    display: flex;
+    justify-content: center; /* Center the forecast cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    margin-top: 20px; /* Adjusted to fit your layout */
+}
+
+#forecast .card {
+    justify-content: center;
+    background: linear-gradient(135deg, rgb(52, 121, 120) 0%, rgb(60, 120, 119) 100%);
+    color: white;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgb(128, 146, 147);
+}
+
+#city-buttons button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.current-weather h2 {
+    font-family: 'Sacramento', cursive;
+}
+
+h3.font-sacramento {
+    margin-top: 20px;
+}
+
+.weather-info {
+    color: #ff6347; /* Custom color for weather info */
+    font-weight: bold;
+}
+
+/* New CSS for the search area */
+#form-submit {
+    background-color: rgb(43, 99, 98); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+#form-submit input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent input background */
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#form-submit button {
+    background-color: rgb(50, 55, 97);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+#form-submit button:hover {
+    background-color: #4018e0;
 }

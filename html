@@ -1,48 +1,50 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Weather App</title>
-  </head>
-  <body>
-    <div class="content">
-      <div class="jumbotron">
-        <div class="container">
-          <h1 class="font-sacramento">Look Up Your Forecast !</h1>
-          <form id="form-submit"> 
-            <div class="form-group">
-              <label for="city" class="font-sacramento">City:</label>
-              <input type="text" class="form-control font-sacramento" id="city" placeholder="ex. Houston">
-            </div>
-            <small class="form-text font-sacramento">Please enter the city name for weather info.</small>
-            <button type="submit" class="btn btn-primary font-sacramento mt-3">Submit</button>
-          </form>
-          <div id="weather-result" class="mt-4">
-            <img id="weather-icon" src="" alt="Weather Icon">
-            <p id="city_name"></p>
-            <p id="city_weather"></p>
-            <p id="city_temp"></p>
-          </div>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Weather Dashboard</title>
+</head>
+<body>
+  <header>
+    <h1 class="font-sacramento">Weather Dashboard</h1>
+  </header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 sidebar">
+        <h2 class="font-sacramento">Search for a City:</h2>
+        <form id="form-submit">
+          <input type="text" class="form-control font-sacramento mb-3" id="city" placeholder="San Diego">
+          <button type="submit" class="btn btn-primary font-sacramento mb-3">Search</button>
+        </form>
+        <div id="city-buttons">
+          <!-- City buttons will be dynamically inserted here -->
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="current-weather">
+          <h2 id="current-city" class="font-sacramento"></h2>
+          <p id="current-temp"></p>
+          <p id="current-wind"></p>
+          <p id="current-humidity"></p>
+        </div>
+        <h3 class="font-sacramento mt-5">5-Day Forecast:</h3>
+        <div class="row" id="forecast">
+          <!-- Forecast cards will be dynamically inserted here -->
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-  </body>
+  <!-- Optional JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
 </html>
