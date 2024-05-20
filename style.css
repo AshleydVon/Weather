@@ -1,0 +1,94 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url('https://cdn.pixabay.com/photo/2021/01/24/20/21/cloud-5946381_1280.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.content {
+    flex: 1;
+}
+
+.jumbotron {
+    background: rgb(111, 121, 177) !important;
+    color: white;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, .font-sacramento {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Sacramento', cursive;
+    font-size: 3em; /* Larger font size for the heading */
+}
+
+.form-control.font-sacramento {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.5em; /* Larger font size for the input field */
+    background: rgb(255, 226, 213);
+    border: none;
+    color: black;
+}
+
+.form-control.font-sacramento::placeholder {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.5em; /* Larger font size for the placeholder text */
+}
+
+.form-control:focus {
+    background: rgb(255, 255, 255);
+    color: black;
+}
+
+.btn-primary.font-sacramento {
+    font-family: 'Sacramento', cursive;
+    font-size: 1.5em; /* Larger font size for the button */
+    background-color: rgb(50, 55, 97);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4018e0;
+}
+
+#weather-result {
+    margin-top: 40px;
+    padding: 40px;
+    border-radius: 10px;
+    background: rgb(221, 137, 138);
+    text-align: center;
+}
+
+#weather-result p {
+    margin: 10px 0;
+}
+
+#weather-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.footer {
+    flex-shrink: 0;
+    height: 650px; /* Adjust the height as needed */
+    background: url('https://cdn.vectorstock.com/i/1000v/32/88/icon-weather-related-to-leisure-and-travel-symbol-vector-50703288.avif') no-repeat center center;
+    background-size: cover;
+}
+
+.form-text.font-sacramento {
+    font-family: 'Sacramento', cursive;
+    font-size: 3em; /* Larger font size for the form text */
+}
