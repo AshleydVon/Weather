@@ -78,11 +78,17 @@ h1, .font-sacramento {
     background-color: #4018e0;
 }
 
+.btn-secondary {
+    color: rgb(43, 99, 98);
+    background: linear-gradient(135deg, rgba(252, 115, 116, 1) 0%, rgba(252, 115, 116, 0.7) 50%, rgba(252, 115, 116, 0.4) 100%);
+    border-color: rgb(108, 117, 125);
+}
+
 #weather-result {
     margin-top: 40px;
     padding: 40px;
     border-radius: 10px;
-    background: rgb(221, 137, 138);
+    background: linear-gradient(135deg, rgba(252, 115, 116, 1) 0%, rgba(252, 115, 116, 0.7) 50%, rgba(252, 115, 116, 0.4) 100%);
     text-align: center;
 }
 
@@ -114,7 +120,7 @@ h1, .font-sacramento {
 }
 
 .current-weather {
-    background-color: rgb(103, 123, 124);
+    background: linear-gradient(135deg, rgba(252, 115, 116, 1) 0%, rgba(252, 115, 116, 0.7) 50%, rgba(252, 115, 116, 0.4) 100%);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
