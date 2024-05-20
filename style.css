@@ -141,6 +141,14 @@ h1, .font-sacramento {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px rgb(128, 146, 147);
+
+/* Weather icon styles */
+.weather-icon {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-bottom: 10px;
+}
+
 }
 
 #city-buttons button {
