@@ -2,7 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Edu TAS Beginner', cursive;
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 }
 
 header {
-    background-color: rgb(43, 99, 98); /* Change this to the desired color */
+    background-color: rgb(43, 99, 98);
     color: white;
     padding: 10px;
     text-align: center;
@@ -26,7 +26,6 @@ header {
 
 header h1 {
     margin: 0;
-    font-family: 'Sacramento', cursive;
     font-size: 3em;
 }
 
@@ -42,24 +41,21 @@ header h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-h1, .font-sacramento {
+h1, .font-edu-tas-beginner {
     text-align: center;
     margin-bottom: 40px;
-    font-family: 'Sacramento', cursive;
-    font-size: 3em; /* Larger font size for the heading */
+    font-size: 3em;
 }
 
-.form-control.font-sacramento {
-    font-family: 'Sacramento', cursive;
-    font-size: 1.5em; /* Larger font size for the input field */
+.form-control.font-edu-tas-beginner {
+    font-size: 1.5em;
     background: rgb(255, 226, 213);
     border: none;
     color: black;
 }
 
-.form-control.font-sacramento::placeholder {
-    font-family: 'Sacramento', cursive;
-    font-size: 1.5em; /* Larger font size for the placeholder text */
+.form-control.font-edu-tas-beginner::placeholder {
+    font-size: 1.5em;
 }
 
 .form-control:focus {
@@ -67,9 +63,8 @@ h1, .font-sacramento {
     color: black;
 }
 
-.btn-primary.font-sacramento {
-    font-family: 'Sacramento', cursive;
-    font-size: 1.5em; /* Larger font size for the button */
+.btn-primary.font-edu-tas-beginner {
+    font-size: 1.5em;
     background-color: rgb(50, 55, 97);
     border: none;
 }
@@ -103,14 +98,13 @@ h1, .font-sacramento {
 
 .footer {
     flex-shrink: 0;
-    height: 650px; /* Adjust the height as needed */
+    height: 650px;
     background: url('https://cdn.vectorstock.com/i/1000v/32/88/icon-weather-related-to-leisure-and-travel-symbol-vector-50703288.avif') no-repeat center center;
     background-size: cover;
 }
 
-.form-text.font-sacramento {
-    font-family: 'Sacramento', cursive;
-    font-size: 3em; /* Larger font size for the form text */
+.form-text.font-edu-tas-beginner {
+    font-size: 3em;
 }
 
 .sidebar {
@@ -128,9 +122,9 @@ h1, .font-sacramento {
 
 #forecast {
     display: flex;
-    justify-content: center; /* Center the forecast cards */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    margin-top: 20px; /* Adjusted to fit your layout */
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 #forecast .card {
@@ -153,21 +147,20 @@ h1, .font-sacramento {
 }
 
 .current-weather h2 {
-    font-family: 'Sacramento', cursive;
+    font-family: 'Edu TAS Beginner', cursive;
 }
 
-h3.font-sacramento {
+h3.font-edu-tas-beginner {
     margin-top: 20px;
 }
 
 .weather-info {
-    color: #ff6347; /* Custom color for weather info */
+    color: #ff6347;
     font-weight: bold;
 }
 
-/* New CSS for the search area */
 #form-submit {
-    background-color: rgb(43, 99, 98); /* Semi-transparent background */
+    background-color: rgb(43, 99, 98);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -175,7 +168,7 @@ h3.font-sacramento {
 }
 
 #form-submit input[type="text"] {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent input background */
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -195,4 +188,18 @@ h3.font-sacramento {
 
 #form-submit button:hover {
     background-color: #4018e0;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+}
+
+.border-primary {
+  border-color: #007bff !important;
+  border-width: 4px !important;
+  border-style: solid !important;
 }

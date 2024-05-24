@@ -6,8 +6,8 @@ $(document).ready(function() {
     fetch(currentWeatherUrl)
       .then(response => response.json())
       .then(data => {
-        console.log('Current Weather Data:', data);  // Log the data to check its structure
-        if (data.cod === 200) {  // Check if the response is successful
+        console.log('Current Weather Data:', data);  
+        if (data.cod === 200) {  
           updateCurrentWeather(data);
         } else {
           console.error('Error:', data.message);
@@ -19,8 +19,8 @@ $(document).ready(function() {
     fetch(forecastUrl)
       .then(response => response.json())
       .then(data => {
-        console.log('Forecast Data:', data);  // Log the data to check its structure
-        if (data.cod === "200") {  // Check if the response is successful
+        console.log('Forecast Data:', data);  
+        if (data.cod === "200") {  
           updateForecast(data);
         } else {
           console.error('Error:', data.message);
@@ -38,7 +38,7 @@ $(document).ready(function() {
 
   function updateForecast(data) {
     $('#forecast').empty();
-    for (let i = 0; i < data.list.length; i += 8) {  // Adjust the increment if necessary to get the right intervals
+    for (let i = 0; i < data.list.length; i += 8) {  
       const forecast = data.list[i];
       const card = `
         <div class="col-md-2 card">
@@ -56,7 +56,7 @@ $(document).ready(function() {
     event.preventDefault();
     const city = $('#city').val();
     getWeather(city);
-    addCityButton(city);  // Add button for the searched city
+    addCityButton(city);  
   });
 
   function addCityButton(city) {
