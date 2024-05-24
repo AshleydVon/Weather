@@ -55,5 +55,5 @@ The following image shows the web application's appearance and functionality:
 
 ## Author
 
-- **Ashley Von** - [yourusername](https://github.com/ashleydvon)
+- **Ashley Von** - [ashleydvon](https://github.com/ashleydvon)
 
