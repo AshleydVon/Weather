@@ -28,21 +28,7 @@ THEN I am again presented with current and future conditions for that city
 
 The following image shows the web application's appearance and functionality:
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./assets/images/screenshot.png)
-
-## Installation
-
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/yourusername/weather-dashboard.git
-    ```
-
-2. Navigate to the project directory:
-    ```sh
-    cd weather-dashboard
-    ```
-
-3. Open `index.html` in your browser to view the application.
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](/assets/images/Screen%20Shot%202024-05-23%20at%2010.34.47%20PM.png)
 
 ## Usage
 
