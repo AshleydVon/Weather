@@ -37,14 +37,14 @@ header h1 {
 
 .container {
     background: rgb(43, 99, 98);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+    padding: 60px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 h1, .font-sacramento {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-family: 'Sacramento', cursive;
     font-size: 3em; /* Larger font size for the heading */
 }
@@ -80,7 +80,7 @@ h1, .font-sacramento {
 
 .btn-secondary {
     color: rgb(43, 99, 98);
-    background: linear-gradient(135deg, rgba(252, 115, 116, 1) 0%, rgba(252, 115, 116, 0.7) 50%, rgba(252, 115, 116, 0.4) 100%);
+    background: linear-gradient(135deg, rgb(252, 115, 116) 0%, rgb(252, 115, 116) 100%);
     border-color: rgb(108, 117, 125);
 }
 
@@ -88,7 +88,7 @@ h1, .font-sacramento {
     margin-top: 40px;
     padding: 40px;
     border-radius: 10px;
-    background: linear-gradient(135deg, rgba(252, 115, 116, 1) 0%, rgba(252, 115, 116, 0.7) 50%, rgba(252, 115, 116, 0.4) 100%);
+    background: linear-gradient(135deg, rgb(252, 115, 116) 0%, rgb(252, 115, 116) 100%);
     text-align: center;
 }
 
@@ -120,7 +120,7 @@ h1, .font-sacramento {
 }
 
 .current-weather {
-    background: linear-gradient(135deg, rgba(252, 115, 116, 1) 0%, rgba(252, 115, 116, 0.7) 50%, rgba(252, 115, 116, 0.4) 100%);
+    background: linear-gradient(135deg, rgb(252, 115, 116) 0%, rgb(252, 115, 116) 100%);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -141,14 +141,6 @@ h1, .font-sacramento {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 4px 8px rgb(128, 146, 147);
-
-/* Weather icon styles */
-.weather-icon {
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
-    margin-bottom: 10px;
-}
-
 }
 
 #city-buttons button {

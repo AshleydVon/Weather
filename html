@@ -11,7 +11,7 @@
   <title>Weather Dashboard</title>
 </head>
 <body>
-  <header>
+  <header class="border border-primary rounded p-2">
     <h1 class="font-sacramento">Weather Dashboard</h1>
   </header>
   <div class="container-fluid">
@@ -27,16 +27,16 @@
         </div>
       </div>
       <div class="col-md-9">
-        <div class="current-weather">
+        <div class="current-weather border border-primary rounded p-2">
           <h2 id="current-city" class="font-sacramento"></h2>
           <p id="current-temp"></p>
           <p id="current-wind"></p>
           <p id="current-humidity"></p>
         </div>
-        <h3 class="font-sacramento mt-5">
+        <h3 class="font-sacramento mt-5 border border-primary rounded p-2">
           5-Day Forecast:
-          <i class="fa-solid fa-sun"></i>
-                </h3>
+          <img src="path_to_your_icon.png" alt="Weather Icon" class="forecast-icon">
+        </h3>
         <div class="row" id="forecast">
           <!-- Forecast cards will be dynamically inserted here -->
         </div>
